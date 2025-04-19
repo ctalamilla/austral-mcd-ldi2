@@ -1,0 +1,35 @@
+1. Base line
+    Modelo: Arboles
+    Features: Originales
+    HT: Max_depth
+    Metricas: Kappa y Acc
+
+2. Baseline
+    Modelo: RF
+    Features: Originales
+    HT: GridSearch (hp?)
+    Metricas: kappa y Acc
+
+3. Modelo1 
+    Modelo: Catboost
+    Features: Originales + FE (revisar las features ingresadas)
+    HT: Optuna, GridSearch
+    Metricas: kappa, acc + Conf Matx.
+
+4. Modelo2
+    Mod: Catboost
+    Cantidad: 10 modelos
+    Features: agrupar por conjuntos y probar (uno de los grupos hacerlo con Fet. Originales)
+    HT: GridSearch o RandomSearch
+    Metricas: idem, features importance
+
+5. Modelo 3
+    Mod: Catboost
+    Cantidad: 9 modelos
+    Features: Originales + Embedding (de uno 8 conjuntos)
+    HT: Optuna, o Grid
+    Metricas: idem
+
+6. Modelo 4
+    Modelo: integrar 2 con 3
+
